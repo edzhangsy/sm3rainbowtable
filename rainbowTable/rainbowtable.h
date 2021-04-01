@@ -25,5 +25,3 @@ private:
 	std::vector<std::string> beginString;
 	std::vector<std::string> endHash;
 };
-
-void convertShash(const char* hash, char* output);

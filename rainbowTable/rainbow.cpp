@@ -109,15 +109,3 @@ std::string rainbowTable::queryTable(const char* hash, int chainLength)
 	}
 	return std::string();
 }
-
-void convertShash(const char* hash, char* output) {
-	char* endpoint;
-	long tmp;
-	tmp = strtol(hash, &endpoint, 16);
-	printf("%s", endpoint);
-	memcpy(output, &tmp, 4);
-	for (int i = 1; i < 8; i++) {
-		tmp = strtol(endpoint, &endpoint, 16);
-		memcpy(output + i * 4, &tmp, 4);
-	}
-}
